@@ -1,0 +1,150 @@
+* {
+    font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.register {
+    height: 100vh;
+    display: flex;
+    background-color: #E1F4F4;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container-img {
+    display: inline-flex;
+    flex: .7 1;
+    background-color: #E1F4F4;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    flex: 1 1;
+}
+
+.form {
+    background-color: #fff;
+    border-radius: 10%;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 40px 100px;
+    padding-right: 120px;
+    width:40%
+    ;
+}
+
+form-text {
+    display: flex;
+    flex-direction: row;
+}
+
+.form-title {
+    font-weight: 900;
+    text-align: center;
+    color: #1E6673;
+    font-size: 48px;
+}
+
+.form-input {
+    display: flex;
+    border: 1px solid #CFCFCF;
+    border-radius: 100px;
+    padding: 0 10px;
+    margin: 5px 0 10px 0;
+}
+
+.form__input-text {
+    margin: 5px 0 10px 0;
+    height: 29px;
+    width: 100%;
+}
+
+.form-visibility {
+    align-content: center;
+    display: inline-flex;
+    width: 100%;
+    height: 29px;
+}
+
+.form__input-visibility {
+    border: none;
+    border-radius: 100px;
+    width: 100%;
+}
+
+.input:focus, .form__input-visibility:focus {
+    outline: none;
+}
+
+.form-label {
+    font-size: 14px;
+    color: #2FA4B8;
+}
+
+.button {
+    border: none;
+    outline: none;
+}
+
+.button-icon {
+    margin-left: auto;
+    display: flex;
+    align-self: center;
+    background-color: transparent;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-register {
+    color: #fff;
+    background-color: #1E6673;
+    border-radius: 100px;
+    font-size: 20px;
+    padding: 10px 30px 10px 30px;
+    margin: 10px;
+    align-self: center;
+}
+.button-register:hover{
+
+    
+    background-color: #19555f;
+}
+
+.button-google {
+    width: 50px;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    border: #CFCFCF 1px solid;
+    margin: 10px;
+    align-self: center;
+}
+.button-google:hover{
+    background-color: rgb(240, 240, 240);
+}
+
+.img-google {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.icon-visibility {
+    color: #CFCFCF;
+    margin: 0;
+    padding: 0;
+}
