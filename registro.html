@@ -12,51 +12,69 @@
     <!--Fuentes google-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <!--Mi css-->
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/style-registro.css">
     <title>Formulario de Registro</title>
 </head>
 
 <body>
-    <div class="container-img">
-        <img class="img"
-            src="https://static.wikia.nocookie.net/peppapedia/images/9/9f/Peppa_Mecanica.PNG/revision/latest/scale-to-width-down/160?cb=20210616010944&path-prefix=es"
-            alt="Peppa">
+
+    <div class="register">
+        <div class="container-img">
+            <img class="img-aside" src="img/edificio.gif" alt="Peppa" height="100%" ">
+        </div>
+
+        <div class="form-container">
+            <form class="form" action="formulario" method="POST">
+                <h1 class="form-title">Sign in</h1>
+
+                <div class="form-name form-text">
+                    <label class="form-label" for="name">Name</label>
+                    <input class="form-input form__input-text" type="text" name="name" id="name">
+                </div>
+
+                <div class="form-email form-text">
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-input form__input-text" type="email" name="email" id="email">
+                </div>
+
+                <div class="form-user form-text">
+                    <label class="form-label" for="user">User</label>
+                    <input class="form-input form__input-text" type="text" name="user" id="user">
+                </div>
+
+                <div class="form-password form-text">
+                    <label class="form-label" for="password">Password</label><br>
+
+                    <div class="form-input form-visibility">
+                    <input class="form__input-visibility " type="password" name="password" id="password">
+                        <button class="button button-icon" type="button"><span
+                        class="material-icons-outlined icon-visibility">visibility</span></button>
+                    </div>
+                </div>
+
+                <div class="form-password form-text">
+                    <label class="form-label" for="confirm-password">ConfirmPassword</label><br>
+
+                    <div class="form-input  form-visibility">
+                        <input class="form__input-visibility" type="password" name="confirm-password" id="confirmpassword">
+                        <button class="button button-icon" type="button">
+                            <span class="material-icons-outlined icon-visibility">visibility</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <button class="button button-register" type="submit">Register</button>
+
+                    <button class="button button-google" type="button"><img class="img-google" src="img/google.svg" alt="register-google"
+                            width="50px"></button>
+                </div>
+            </form>
+        </div>
     </div>
-    <div>
-        <form class="form" action="formulario" method="POST">
-            <h1 class="form-title">Sign in</h1>
-            <div class="form-name form-text">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name">
-            </div>
-            <div class="form-email form-text">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email">
-            </div>
-            <div class="form-user form-text">
-                <label for="user">User</label>
-                <input type="text" name="user" id="user">
-            </div>
-            <div class="form-password form-text">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password">
-                <button class="button-icon"><span class="material-icons-outlined">visibility</span></button>
-            </div>
-            <div class="form-password form-text">
-                <label for="confirmpassword">ConfirmPassword</label>
-                <input type="password" name="confirmpassword" id="confirmpassword">
-                <button class="button-icon"><span class="material-icons-outlined">visibility</span></button>
-            </div>
-            <div class="buttons">
-                <button type="button">Register</button>
-                <button type="button"><img
-                        src="https://freesvg.org/img/1534129544.png"
-                        alt="Register google" width="50px"></button>
-            </div>
-        </form>
-    </div>
+
 </body>
 
 </html>
