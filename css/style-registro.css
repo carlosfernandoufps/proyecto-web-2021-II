@@ -26,22 +26,25 @@
 
     /*Aside image*/
         .container-img {
-            display: inline-flex;
-            flex: .7 1;
+            display: flex;
+            flex: .8 2;
             justify-content: center;
             align-items: center;
-            height: 100%;
+            height: 100vh;
+            animation: moveAnimation 1s ease-in;
         }
 
-        .img {
-            width: 100%;
+        .img-aside{
+            width:100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: covers;
+            
         }
 
 /*Form box properties*/
 
 .form {
+    box-shadow: 0 0 15px var(--color-grey);
     background-color: var(--color-white);
     border-radius: 10%;
     display: inline-flex;
@@ -49,6 +52,7 @@
     padding: 40px 100px;
     padding-right: 120px;
     width: 40%;
+    animation: moveAnimation 1s ease-in;
 }
 
 .form-container {
@@ -115,6 +119,7 @@ form-text {
 .btn {
     border: none;
     outline: none;
+    
 }
 
 .btn-icon {
@@ -138,6 +143,7 @@ form-text {
     padding: 10px 30px 10px 30px;
     margin: 10px;
     align-self: center;
+    box-shadow: 2px 2px 5px var(--color-grey);
 }
 
 .btn-register:hover {
@@ -145,7 +151,9 @@ form-text {
 }
 
 .btn-google {
+    box-shadow: 2px 2px 5px var(--color-grey);
     width: 50px;
+    height: 50px;
     padding: 0;
     background-color:transparent;
     border-radius: 50%;
@@ -175,39 +183,53 @@ form-text {
     color: var(--color-grey-hover);
     user-select: none;
 }
-
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1280px) {
     .container-img {
+        
         display: none;
     }
+
     .register {
-        display: inline;
-        background-color: var(--color-medium-greenblue);
-        height: 50vh;
+        display: flex;
+       
+        height: 100vh;
     }
-    form {
+    .form-container{
+        background-color: var(--color-light-greenblue);
+    }
+    .form {
         background-color: var(--color-white);
         border-radius: 10%;
         display: inline-flex;
         flex-direction: column;
-        padding: 20px 50px;
-        padding-right: 120px;
+        padding: 20px 80px;
+        padding-right: 100px;
         width: 40%;
     }
 }
 
 @media screen and (max-width:500px)and (min-width:0px){
     .register{
-        height: 0px;
+        height: 100vh;
+        display: flex;
+        background-color: var(--color-white);
+    }
+    
+    .form-container{
+        background-color: var(--color-white);
         display: block;
+        padding: 60px;
+        padding-right: 70px;
     }
     .form{
         display: inline;
         padding: 0px 20px;
+        box-shadow: none;
+        border-radius: 0px;
+        animation: 1s moveAnimation ease-in;
 
     }
     .form-title{
-
         font-size: 35px;
     }
 
@@ -220,5 +242,16 @@ form-text {
     }
     .btn-google{
         padding:5px;
+    }
+}
+
+@keyframes moveAnimation{
+    0%{
+        opacity: 0;
+        transform: translateX(100);
+    }
+    100%{
+        opacity: 100;
+        transform: 0;
     }
 }
