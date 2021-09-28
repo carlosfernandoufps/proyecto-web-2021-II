@@ -1,14 +1,15 @@
 :root {
     --title-font: 48px;
-    --label-font:16px;
-    --color-grey:#CFCFCF;
-    --color-grey-hover:#b1b1b1;
-    --color-light-greenblue: #E1F4F4;
+    --label-font: 16px;
+    --color-grey: #CFCFCF;
+    --color-grey-hover: #b1b1b1;
+    --color-light-greenblue: #BDF4F4;
     --color-white: #fff;
-    --color-dark-greenblue:#1E6673;
-    --color-dark-greenblue-hover:#19555f;
-    --color-medium-greenblue:#2FA4B8;
-    --color-ultra-light-grey:#F0F0F0;
+    --color-dark-greenblue: #1E6673;
+    --color-dark-greenblue-hover: #19555f;
+    --color-medium-greenblue: #2FA4B8;
+    --color-ultra-light-grey: #F0F0F0;
+    --background-image: url("../assets/img/Background.svg");
 }
 
 * {
@@ -16,30 +17,22 @@
 }
 
 /*Register box*/
+
 .register {
     height: 100vh;
-    display: flex;
-    background-color: var(--color-light-greenblue);
+    display: grid;
     flex-direction: row;
     align-items: center;
+    grid-template-columns: 1fr  1.3fr;
+    animation: moveAnimation 1s ease-in;
 }
 
-    /*Aside image*/
-        .container-img {
-            display: flex;
-            flex: .8 2;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            animation: moveAnimation 1s ease-in;
-        }
+.background-image {
+    background: var(--background-image ) ;
+    background-repeat:no-repeat;
+    background-size: cover;
 
-        .img-aside{
-            width:100%;
-            height: 100%;
-            object-fit: covers;
-            
-        }
+}
 
 /*Form box properties*/
 
@@ -59,8 +52,8 @@
     display: flex;
     justify-content: center;
     flex: 1 1;
+    grid-column: 2/3;
 }
-
 
 form-text {
     display: flex;
@@ -81,7 +74,7 @@ form-text {
 
 .form-input {
     display: flex;
-    border: 1px  var(--color-grey) solid;
+    border: 1px var(--color-grey) solid;
     border-radius: 100px;
     padding: 0 10px;
     margin: 5px 0 10px 0;
@@ -114,12 +107,9 @@ form-text {
     outline: none;
 }
 
-
-
 .btn {
     border: none;
     outline: none;
-    
 }
 
 .btn-icon {
@@ -137,7 +127,7 @@ form-text {
 
 .btn-register {
     color: var(--color-white);
-    background-color:var(--color-dark-greenblue);
+    background-color: var(--color-dark-greenblue);
     border-radius: 100px;
     font-size: 20px;
     padding: 10px 30px 10px 30px;
@@ -155,16 +145,16 @@ form-text {
     width: 50px;
     height: 50px;
     padding: 0;
-    background-color:transparent;
+    background-color: transparent;
     border-radius: 50%;
     padding: 5px;
-    border:  1px  var(--color-grey) solid;
+    border: 1px var(--color-grey) solid;
     margin: 10px;
     align-self: center;
 }
 
 .btn-google:hover {
-    background-color:  var(--color-ultra-light-grey) ;
+    background-color: var(--color-ultra-light-grey);
 }
 
 .img-google {
@@ -183,18 +173,20 @@ form-text {
     color: var(--color-grey-hover);
     user-select: none;
 }
+
 @media screen and (max-width: 1280px) {
+    
     .container-img {
-        
         display: none;
     }
-
     .register {
         display: flex;
-       
         height: 100vh;
     }
-    .form-container{
+    .background-image{
+        background: #C5F5F5;
+    }
+    .form-container {
         background-color: var(--color-light-greenblue);
     }
     .form {
@@ -208,49 +200,45 @@ form-text {
     }
 }
 
-@media screen and (max-width:500px)and (min-width:0px){
-    .register{
+@media screen and (max-width:500px)and (min-width:0px) {
+    .register {
         height: 100vh;
         display: flex;
         background-color: var(--color-white);
     }
-    
-    .form-container{
+    .form-container {
         background-color: var(--color-white);
         display: block;
         padding: 60px;
         padding-right: 70px;
     }
-    .form{
+    .form {
         display: inline;
         padding: 0px 20px;
         box-shadow: none;
         border-radius: 0px;
         animation: 1s moveAnimation ease-in;
-
     }
-    .form-title{
-        font-size: 35px;
+    .form-title {
+        font-size: 45px;
     }
-
-    .form-label{
-        font-size: 14px;
+    .form-label {
+        font-size: 17px;
     }
-
-    .btn-register{
-        font-size: 13px;
+    .btn-register {
+        font-size: 20px;
     }
-    .btn-google{
-        padding:5px;
+    .btn-google {
+        padding: 4px;
     }
 }
 
-@keyframes moveAnimation{
-    0%{
+@keyframes moveAnimation {
+    0% {
         opacity: 0;
         transform: translateX(100);
     }
-    100%{
+    100% {
         opacity: 100;
         transform: 0;
     }
